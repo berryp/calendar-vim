@@ -305,7 +305,7 @@ function! calendar#show(...)
     let leftmargin = (width - (strlen(whitehrz) + 3) * 7 - 1) / 2
     let whiteleft = ''
     while h < leftmargin
-      let whiteleft = whiteleft.' '
+      let whiteleft = whiteleft.' 's
       let h = h + 1
     endwhile
     let h = 0
@@ -852,6 +852,7 @@ function! calendar#show(...)
     setlocal noswapfile
     setlocal buftype=nofile
     setlocal bufhidden=delete
+    setlocal nospell
     silent! exe "setlocal " . g:calendar_options
     let nontext_columns = &foldcolumn + &nu * &numberwidth
     if has("+relativenumber")
