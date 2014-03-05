@@ -34,7 +34,7 @@ if !exists("g:calendar_datetime")
 endif
 if !exists("g:calendar_options")
   let g:calendar_options = "fdc=0 nonu"
-  if has("+relativenumber")
+  if exists("+relativenumber")
     let g:calendar_options .= " nornu"
   endif
 endif
